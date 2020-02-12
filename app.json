@@ -1,0 +1,44 @@
+{
+  "id": "app.keeping.homey",
+  "version": "0.0.1",
+  "compatibility": ">=1.5.0",
+  "sdk": 2,
+  "name": {
+    "en": "Keeping"
+  },
+  "description": {
+    "en": "Keeping is a tool for easy time tracking and reporting."
+  },
+  "category": [
+    "internet"
+  ],
+  "permissions": [],
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "author": {
+    "name": "Thijs",
+    "email": "thijs@keeping.nl"
+  },
+  "drivers": [
+    {
+      "id": "organisation",
+      "name": {
+        "en": "Keeping organisation"
+      },
+      "class": "other",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/organisation/assets/images/large.png",
+        "small": "/drivers/organisation/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "login_oauth2",
+          "template": "login_oauth2"
+        }
+      ]
+    }
+  ]
+}
