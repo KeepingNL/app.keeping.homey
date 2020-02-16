@@ -7,7 +7,8 @@ const KeepingOAuth2Client = require('./lib/KeepingOAuth2Client');
 module.exports = class KeepingApp extends OAuth2App {
 	
 	onOAuth2Init() {
-		 	
+			 
+		this.enableOAuth2Debug();
   		this.setOAuth2Config({
     		client: KeepingOAuth2Client,
     		apiUrl: 'https://api.keeping.nl/v1',
