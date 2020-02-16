@@ -49,14 +49,14 @@ module.exports = class KeepingAccountDevice extends OAuth2Device {
 			});
 	}
 
-	async onCapabilityOnoff( value, opts ) {
+	async onCapabilityOnoff( turnOn, opts ) {
 
 		const organisationId = this.getData().organisation.id;
 		const userId = this.getData().user.id;
 
-		const on = await this.checkOngoingEntry();
+		const isOn = await this.checkOngoingEntry();
 		
-		if (on) {
+		if (isOn && !turnOn) {
 			this.log('stopping entry');
 
 			const ongoing = await this.oAuth2Client.getOngoingEntry(organisationId, userId);
@@ -67,7 +67,7 @@ module.exports = class KeepingAccountDevice extends OAuth2Device {
 						.catch(this.error);
 					return true;
 				});
-		} else {
+		} else if(!isOn && turnOn) {
 			this.log('resuming entry');
 
 			const last = await this.oAuth2Client.getLastEntry(organisationId, userId);
