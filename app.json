@@ -4,10 +4,25 @@
   "compatibility": ">=1.5.0",
   "sdk": 2,
   "name": {
-    "en": "Keeping"
+    "en": "Keeping",
+    "nl": "Keeping"
   },
+  "brandColor": "#1ed760",
   "description": {
-    "en": "Keeping is a tool for easy time tracking and reporting."
+    "en": "Start or stop your Keeping work timer. Easy time tracking integration with Homey and Keeping.",
+    "nl": "Gemakkelijke en geautomatiseerde urenregistratie met Keeping voor Homey. Houdt je werktijd eenvoudig bij, start en stop automatisch jouw timer."
+  },
+  "tags": {
+    "en": [
+      "keeping",
+      "time tracking"
+    ],
+    "nl": [
+      "keeping",
+      "urenregistratie",
+      "tijdregistratie",
+      "aanwezigheid"
+    ]
   },
   "category": [
     "internet"
@@ -18,8 +33,15 @@
     "small": "/assets/images/small.png"
   },
   "author": {
-    "name": "Thijs",
-    "email": "thijs@keeping.nl"
+    "name": "Keeping B.V."
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Thijs Scheepers",
+        "email": "thijs@keeping.nl"
+      }
+    ]
   },
   "drivers": [
     {

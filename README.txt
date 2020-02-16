@@ -1,3 +1,3 @@
-Use time tracking app [Keeping](https://homey.aap) with [Homey](https://homey.app).
+Start or stop your Keeping work timer. Easy time tracking integration with Homey and Keeping.
 
-This Homey app allows you to start or stop your work timer. For example, if you have a Homey at work you could start your timer automatically when you arive, and stop it automatically when you leave.
+For example, if you have a Homey at work you could start your timer automatically when you arive, and stop it automatically when you leave.
