@@ -5,7 +5,7 @@
     "nl": "Keeping-account"
   },
   "class": "other",
-  "capabilities": [],
+  "capabilities": ["onoff"],
   "images": {
     "large": "/drivers/keeping-account/assets/images/large.png",
     "small": "/drivers/keeping-account/assets/images/small.png"
