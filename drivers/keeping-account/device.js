@@ -13,7 +13,7 @@ module.exports = class KeepingAccountDevice extends OAuth2Device {
 		this.registerCapabilityListener('onoff', this.onCapabilityOnoff.bind(this));
 
 		await this.checkOngoingEntry()
-		this.checkOngoingEntryInterval = setInterval(this.checkOngoingEntry, SYNC_FLOW_TOKENS_INTRVAL);
+		this.checkOngoingEntryInterval = setInterval(this.checkOngoingEntry, INTERVAL);
 	}
 
 	onOAuth2Migrate() {

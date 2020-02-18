@@ -15,7 +15,8 @@ module.exports = class KeepingApp extends OAuth2App {
     		authorizationUrl: 'https://keeping.nl/oauth/authorize',
     		scopes: ['time'],
     		clientId: Homey.env.CLIENT_ID,
-    		clientSecret: Homey.env.CLIENT_SECRET
+			clientSecret: Homey.env.CLIENT_SECRET,
+			allowMultiSession: true
   		});
   	
 		this.log('Keeping is running...');
