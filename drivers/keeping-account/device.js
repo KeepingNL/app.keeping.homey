@@ -3,7 +3,7 @@
 const Homey = require('homey');
 const { OAuth2Device } = require('homey-oauth2app');
 
-const INTERVAL = 1000 * 60 * 15; // 15 min
+const INTERVAL = 1000 * 60 *  15; // 15 min
 
 module.exports = class KeepingAccountDevice extends OAuth2Device {
 	
@@ -13,7 +13,7 @@ module.exports = class KeepingAccountDevice extends OAuth2Device {
 		this.registerCapabilityListener('onoff', this.onCapabilityOnoff.bind(this));
 
 		await this.checkOngoingEntry()
-		this.checkOngoingEntryInterval = setInterval(this.checkOngoingEntry, INTERVAL);
+		this.checkOngoingEntryInterval = setInterval(this.checkOngoingEntry.bind(this), INTERVAL);
 	}
 
 	onOAuth2Migrate() {
@@ -27,8 +27,10 @@ module.exports = class KeepingAccountDevice extends OAuth2Device {
 		}  	
 	}
 
-	checkOngoingEntry()
-	{
+	checkOngoingEntry() {
+
+		this.log('checking ongoing entry');
+
 		const organisationId = this.getData().organisation.id;
 		const userId = this.getData().user.id;
 
