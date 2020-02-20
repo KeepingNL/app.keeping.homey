@@ -1,0 +1,11 @@
+{
+  "0.0.1": {
+    "en": "Entirely new app"
+  },
+  "0.0.2": {
+    "en": "Allow multiple sessions"
+  },
+  "0.0.3": {
+    "en": "Fixed bug"
+  }
+}
