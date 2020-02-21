@@ -7,5 +7,8 @@
   },
   "0.0.3": {
     "en": "Fixed bug"
+  },
+  "0.0.4": {
+    "en": "Account for running breaks"
   }
 }
